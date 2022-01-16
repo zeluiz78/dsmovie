@@ -1,4 +1,5 @@
-import './styles.css';
+import { Link } from "react-router-dom";
+import "./styles.css";
 
 function Form() {
   const movie = {
@@ -12,9 +13,13 @@ function Form() {
 
   return (
     <div className="dsmovie-form-container">
-      <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
+      <img
+        className="dsmovie-movie-card-image"
+        src={movie.image}
+        alt={movie.title}
+      />
       <div className="dsmovie-card-bottom-container">
-        <h3>{movie.title}</h3>
+        <h3>"The Witcher"</h3>
         <form className="dsmovie-form">
           <div className="form-group dsmovie-form-group">
             <label htmlFor="email">Informe seu email</label>
@@ -36,7 +41,9 @@ function Form() {
             </button>
           </div>
         </form>
-        <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+        <Link to="/">
+          <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+        </Link>
       </div>
     </div>
   );
